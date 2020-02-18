@@ -1,17 +1,21 @@
 import googleMapsApi from '@p803/google-maps-api'
 import Autocomplete from './components/Autocomplete'
+import Map from './components/Map'
 
 const VueGoogleMaps = {}
 
-VueGoogleMaps.install = function (Vue, options) {
-    // Add Google Maps API instance property.
+VueGoogleMaps.install = function (Vue, params) {
+    // Set API parameters.
+    googleMapsApi.params = params
+
+    // Add API instance property.
     Vue.prototype.$googleMapsApi = googleMapsApi
 
-    // Add Autocomplete component.
+    // Register autocomplete component.
     Vue.component('google-maps-autocomplete', Autocomplete)
 
-    // Load the Google Maps API.
-    googleMapsApi(options)
+    // Register map component.
+    Vue.component('google-maps-map', Map)
 }
 
 export default VueGoogleMaps

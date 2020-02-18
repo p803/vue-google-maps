@@ -1,6 +1,6 @@
 {
   "name": "@p803/vue-google-maps",
-  "version": "1.0.3",
+  "version": "1.2.0",
   "description": "Google Maps plugin for Vue",
   "main": "index.js",
   "scripts": {
@@ -12,8 +12,7 @@
   },
   "keywords": [
     "vue",
-    "google-maps",
-    "api"
+    "google-maps"
   ],
   "author": "Łukasz Proksa",
   "license": "MIT",
@@ -22,6 +21,6 @@
   },
   "homepage": "https://github.com/p803/vue-google-maps#readme",
   "dependencies": {
-    "@p803/google-maps-api": "1.0.*"
+    "@p803/google-maps-api": "^1.2.0"
   }
 }
