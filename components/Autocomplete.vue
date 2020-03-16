@@ -1,19 +1,30 @@
 <template>
-    <input ref="autocomplete" />
+    <input :value="value" @input="input" v-on="listeners" ref="autocomplete" />
 </template>
 
 <script>
 export default {
     props: {
+        value: {
+            type: String,
+            default: ''
+        },
         options: {
             type: Object,
-            required: false
+            default: {}
         }
     },
     data() {
         return {
             autocomplete: {}
         };
+    },
+    computed: {
+        listeners() {
+            const { input, ...listeners } = this.$listeners;
+
+            return listeners;
+        }
     },
     mounted() {
         this.createAutocomplete();
@@ -30,6 +41,9 @@ export default {
             this.autocomplete.addListener('place_changed', () =>
                 this.$emit('place_changed', this.autocomplete.getPlace())
             );
+        },
+        input($event) {
+            this.$emit('input', $event.target.value);
         }
     }
 };

@@ -18,4 +18,6 @@ VueGoogleMaps.install = function (Vue, params) {
     Vue.component('google-maps-map', Map)
 }
 
+export { googleMapsApi }
+
 export default VueGoogleMaps

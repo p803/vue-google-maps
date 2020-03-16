@@ -1,6 +1,6 @@
 {
   "name": "@p803/vue-google-maps",
-  "version": "1.2.0",
+  "version": "1.4.0",
   "description": "Google Maps plugin for Vue",
   "main": "index.js",
   "scripts": {

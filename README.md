@@ -27,6 +27,7 @@ Vue.use(VueGoogleMaps, {
 ```vue
 <template>
     <google-maps-autocomplete
+        v-model="input"
         :options="{
             types: ['(cities)'],
             componentRestrictions: { country: 'pl' },
@@ -48,6 +49,11 @@ Vue.use(VueGoogleMaps, {
 
 <script>
 export default {
+    data() {
+        return {
+            input: '',
+        }
+    },
     methods: {
         onPlaceChanged(place) {
             // Print details.

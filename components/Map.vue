@@ -7,7 +7,7 @@ export default {
     props: {
         options: {
             type: Object,
-            required: false
+            default: {}
         }
     },
     data() {
