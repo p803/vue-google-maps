@@ -1,0 +1,11 @@
+# Editor configuration.
+.vscode
+
+# Local files.
+*.local
+
+# Build artifacts.
+dist
+
+# Dependencies.
+node_modules

@@ -7,12 +7,12 @@ export default {
     props: {
         options: {
             type: Object,
-            default: {}
-        }
+            default: () => ({}),
+        },
     },
     data() {
         return {
-            map: {}
+            map: {},
         };
     },
     mounted() {
@@ -23,7 +23,7 @@ export default {
             const api = await this.$googleMapsApi();
 
             this.map = new api.Map(this.$refs.map, this.options);
-        }
-    }
+        },
+    },
 };
 </script>

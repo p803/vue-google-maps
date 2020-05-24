@@ -7,16 +7,16 @@ export default {
     props: {
         value: {
             type: String,
-            default: ''
+            default: '',
         },
         options: {
             type: Object,
-            default: {}
-        }
+            default: () => ({}),
+        },
     },
     data() {
         return {
-            autocomplete: {}
+            autocomplete: {},
         };
     },
     computed: {
@@ -24,7 +24,7 @@ export default {
             const { input, ...listeners } = this.$listeners;
 
             return listeners;
-        }
+        },
     },
     mounted() {
         this.createAutocomplete();
@@ -35,16 +35,14 @@ export default {
 
             this.autocomplete = new api.places.Autocomplete(
                 this.$refs.autocomplete,
-                this.options
+                this.options,
             );
 
-            this.autocomplete.addListener('place_changed', () =>
-                this.$emit('place_changed', this.autocomplete.getPlace())
-            );
+            this.autocomplete.addListener('place_changed', () => this.$emit('place_changed', this.autocomplete.getPlace()));
         },
         input($event) {
             this.$emit('input', $event.target.value);
-        }
-    }
+        },
+    },
 };
 </script>
