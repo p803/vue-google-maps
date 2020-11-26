@@ -6,7 +6,7 @@ Let's register the plugin.
 import Vue from 'vue'
 import VueGoogleMaps from '@p803/vue-google-maps'
 
-// Set API parameters.
+// Set api parameters.
 Vue.use(VueGoogleMaps, {
     key: '{key}',                      // required
     libraries: ['places', 'geometry'], // optional
@@ -16,7 +16,7 @@ Vue.use(VueGoogleMaps, {
 
 ## Browser
 ```js
-// Set API parameters.
+// Set api parameters.
 window.Vue.use(window.p803.VueGoogleMaps, {
     key: '{key}',                      // required
     libraries: ['places', 'geometry'], // optional

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <!-- Map centered at Warsaw, the capital city of Poland. -->
+        <!-- Map centered at Warsaw, the capital of Poland. -->
         <google-maps-map
             class="map"
             :options="{
@@ -10,7 +10,7 @@
             }"
         />
 
-        <!-- Autocomplate polish cities. -->
+        <!-- Autocomplete polish cities. -->
         <google-maps-autocomplete
             v-model="input"
             :options="{
@@ -28,15 +28,15 @@
 export default {
     data() {
         return {
-            input: ''
+            input: '',
         };
     },
     methods: {
         onPlaceChanged(place) {
             // Print details.
             console.log(place);
-        }
-    }
+        },
+    },
 };
 </script>
 

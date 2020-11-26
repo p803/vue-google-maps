@@ -1,4 +1,5 @@
 require('dotenv-flow').config()
+
 const pkg = require('../../package.json')
 
 const [user, repo] = pkg.name.substr(1).split('/')
@@ -16,9 +17,9 @@ module.exports = {
             '/installation.md',
             '/getting-started.md',
             '/components.md',
-            '/examples.md',
+            '/example.md',
         ]
     },
-    host: process.env.VUE_HOST,
-    port: process.env.VUE_PORT,
+    host: process.env.DOC_HOST,
+    port: process.env.DOC_PORT,
 }

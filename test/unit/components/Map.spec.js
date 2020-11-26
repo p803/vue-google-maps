@@ -1,20 +1,23 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils';
-import Autocomplete from '../../src/components/Autocomplete.vue';
-import VueGoogleMaps from '../../src';
+import Map from '@/components/Map.vue';
+import VueGoogleMaps from '@/';
 
 const localVue = createLocalVue();
 
 localVue.use(VueGoogleMaps);
 
-describe('Autocomplete', () => {
-    it('is a Vue instance', () => {
+describe('Map', () => {
+    it('is a vue instance', () => {
+        // Given:
         const options = {};
 
-        const wrapper = shallowMount(Autocomplete, {
+        // When:
+        const wrapper = shallowMount(Map, {
             localVue,
             propsData: { options },
         });
 
+        // Then:
         expect(wrapper.isVueInstance()).toBeTruthy();
     });
 });

@@ -3,9 +3,10 @@ The options that can be set on each component adhere to the Google Maps API docu
 
 ## Map
 Renders [google maps map](https://developers.google.com/maps/documentation/javascript/reference/map#Map) (see [options](https://developers.google.com/maps/documentation/javascript/reference/map#MapOptions)).
+
 ```vue
 <template>
-    <!-- Map centered at Warsaw, the capital city of Poland. -->
+    <!-- Map centered at Warsaw, the capital of Poland. -->
     <google-maps-map
         class="map"
         :options="{
@@ -24,10 +25,11 @@ Renders [google maps map](https://developers.google.com/maps/documentation/javas
 ```
 
 ## Autocomplete
-Renders [google maps autocomplete widget](https://developers.google.com/maps/documentation/javascript/reference/places-widget#Autocomplete) (see [options](https://developers.google.com/maps/documentation/javascript/reference/places-widget#AutocompleteOptions)).
+Renders [google maps autocomplete](https://developers.google.com/maps/documentation/javascript/reference/places-widget#Autocomplete) (see [options](https://developers.google.com/maps/documentation/javascript/reference/places-widget#AutocompleteOptions)).
+
 ```vue
 <template>
-    <!-- Autocomplate polish cities. -->
+    <!-- Autocomplete polish cities. -->
     <google-maps-autocomplete
         v-model="input"
         :options="{

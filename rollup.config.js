@@ -1,3 +1,4 @@
+import alias from '@rollup/plugin-alias';
 import babel from '@rollup/plugin-babel';
 import builtins from 'rollup-plugin-node-builtins';
 import commonjs from '@rollup/plugin-commonjs';
@@ -25,10 +26,16 @@ export default [
                 globals: {
                     '@babel/runtime/regenerator': '_regeneratorRuntime',
                     '@p803/google-maps-api': 'p803.googleMapsApi',
+                    '@babel/runtime/helpers/esm/objectWithoutPropertiesLoose': 'objectWithoutPropertiesLoose',
                 },
             },
         ],
         plugins: [
+            alias({
+                entries: [
+                    { find: /^@\/(.*)/, replacement: `${__dirname}/src/$1` },
+                ],
+            }),
             commonjs(),
             vue(),
             babel({
@@ -43,10 +50,11 @@ export default [
             '@babel/runtime/regenerator',
             'regenerator-runtime/runtime',
             'core-js/modules/es.array.map',
+            '@babel/runtime/helpers/esm/objectWithoutPropertiesLoose',
         ],
     },
     {
-        // Standalone version.
+        // Standalone format.
         input,
         output: {
             file: pkg.unpkg,
@@ -54,6 +62,11 @@ export default [
             name: 'VueGoogleMaps',
         },
         plugins: [
+            alias({
+                entries: [
+                    { find: /^@\/(.*)/, replacement: `${__dirname}/src/$1` },
+                ],
+            }),
             builtins(),
             resolve(),
             commonjs(),
@@ -61,7 +74,6 @@ export default [
             babel({
                 babelrc: false,
                 babelHelpers: 'bundled',
-                exclude: 'node_modules/**',
             }),
             terser(),
         ],
