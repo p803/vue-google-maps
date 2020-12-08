@@ -15,4 +15,4 @@ execSync('git config user.name p803', options);
 execSync('git config user.email luk.proksa@gmail.com', options);
 execSync('git add --all', options);
 execSync('git commit --message "Publish doc"', options);
-execSync('git push --force git@github.com:p803/vue-facebook.git master:gh-pages', options);
+execSync('git push --force git@github.com:p803/vue-google-maps.git master:gh-pages', options);

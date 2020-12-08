@@ -20,8 +20,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com) and this p
 - Added Autocomplete component.
 - Added Map component.
 
-[Unreleased]: https://github.com/p803/vue-facebook/compare/v2.1.0...HEAD
-[2.1.0]: https://github.com/p803/vue-facebook/compare/v2.0.1...v2.1.0
-[2.0.1]: https://github.com/p803/vue-facebook/compare/v1.4.0...v2.0.1
-[1.4.0]: https://github.com/p803/vue-facebook/compare/v1.2.0...v1.4.0
-[1.2.0]: https://github.com/p803/vue-facebook/releases/tag/v1.2.0
+[Unreleased]: https://github.com/p803/vue-google-maps/compare/v2.1.0...HEAD
+[2.1.0]: https://github.com/p803/vue-google-maps/compare/v2.0.1...v2.1.0
+[2.0.1]: https://github.com/p803/vue-google-maps/compare/v1.4.0...v2.0.1
+[1.4.0]: https://github.com/p803/vue-google-maps/compare/v1.2.0...v1.4.0
+[1.2.0]: https://github.com/p803/vue-google-maps/releases/tag/v1.2.0
