@@ -3,9 +3,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com) and this p
 
 ## [Unreleased]
 
-## [2.1.0] - 2020-12-08
+## [3.0.0] - 2021-06-29
 ### Changed
-- Load api on install.
+- Used official Google Maps API loader.
 
 ## [2.0.1] - 2020-05-24
 ### Added
@@ -20,7 +20,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com) and this p
 - Added Autocomplete component.
 - Added Map component.
 
-[Unreleased]: https://github.com/p803/vue-google-maps/compare/v2.1.0...HEAD
+[Unreleased]: https://github.com/p803/vue-google-maps/compare/v3.0.0...HEAD
+[3.0.0]: https://github.com/p803/vue-google-maps/compare/v2.1.0...v3.0.0
 [2.1.0]: https://github.com/p803/vue-google-maps/compare/v2.0.1...v2.1.0
 [2.0.1]: https://github.com/p803/vue-google-maps/compare/v1.4.0...v2.0.1
 [1.4.0]: https://github.com/p803/vue-google-maps/compare/v1.2.0...v1.4.0

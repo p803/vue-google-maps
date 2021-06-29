@@ -6,4 +6,4 @@ To play with the example run this command:
 npm run serve:example
 ```
 
-Please set your google maps api key in `GOOGLE_MAPS_KEY` environment variable.
+Please set your Google Maps API key in `API_KEY` environment variable.

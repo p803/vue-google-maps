@@ -1,13 +1,12 @@
-process.env.VUE_APP_GOOGLE_MAPS_KEY = process.env.GOOGLE_MAPS_KEY;
+process.env.VUE_APP_API_KEY = process.env.API_KEY
 
 module.exports = {
-    configureWebpack: {
-        devtool: 'source-map',
-    },
-    devServer: {
-        https: true,
-        host: process.env.EXAMPLE_HOST,
-        port: process.env.EXAMPLE_PORT,
-    },
-    lintOnSave: false,
-};
+  configureWebpack: {
+    devtool: 'source-map'
+  },
+  devServer: {
+    host: process.env.EXAMPLE_HOST,
+    port: process.env.EXAMPLE_PORT
+  },
+  lintOnSave: false
+}

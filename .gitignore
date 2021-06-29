@@ -7,5 +7,5 @@
 # Build artifacts.
 dist
 
-# Dependencies.
+# External dependencies.
 node_modules
