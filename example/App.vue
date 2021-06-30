@@ -5,7 +5,7 @@
       class="map"
       :options="{
         zoom: 4,
-        center: {lat: -25.344, lng: 131.036}
+        center: { lat: -25.344, lng: 131.036 }
       }"
     />
 

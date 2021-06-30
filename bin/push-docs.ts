@@ -1,6 +1,7 @@
 import { execSync } from 'child_process'
+import { resolve } from 'path'
 
-const options = { cwd: '../docs/.vuepress/dist' }
+const options = { cwd: resolve(__dirname, '..', 'docs', '.vuepress', 'dist') }
 execSync('rm --force --recursive .git', options)
 execSync('git init', options)
 execSync('git config user.name p803', options)

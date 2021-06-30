@@ -5,7 +5,7 @@ import App from './App.vue'
 const apiKey = process.env.VUE_APP_API_KEY
 
 if (!apiKey) {
-  console.error('Vue Google Maps error: No api key. Some examples may not work as expected.\nTo fix this issue, please set API_KEY environment variable.')
+  console.error('Vue Google Maps error: No api key. Some examples may not work as expected. To fix this issue, please set API_KEY environment variable.')
 }
 
 Vue.use(VueGoogleMaps, {
@@ -16,7 +16,7 @@ Vue.use(VueGoogleMaps, {
 Vue.config.productionTip = false
 
 new Vue({
-  render: (h) => h(App)
+  render: h => h(App)
 }).$mount('#app')
 
 document.title = 'Vue Google Maps'

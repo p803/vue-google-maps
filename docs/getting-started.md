@@ -1,12 +1,11 @@
 # Getting Started
-Let's register the plugin.
+Let's register the plugin. The official [Google Maps API loader](https://googlemaps.github.io/js-api-loader/interfaces/loaderoptions.html) is the authoritative source for plugin options.
 
 ## Node
 ```js
 import Vue from 'vue'
 import VueGoogleMaps from '@p803/vue-google-maps'
 
-// Set api options (see https://googlemaps.github.io/js-api-loader/interfaces/loaderoptions.html).
 Vue.use(VueGoogleMaps, {
   apiKey: '{api-key}',
   libraries: ['places', 'geometry']
@@ -14,8 +13,8 @@ Vue.use(VueGoogleMaps, {
 ```
 
 ## Browser
+Vue and VueGoogleMaps will be registered as a global variable.
 ```js
-// Set api options (see https://googlemaps.github.io/js-api-loader/interfaces/loaderoptions.html).
 Vue.use(VueGoogleMaps, {
   apiKey: '{key}',
   libraries: ['places', 'geometry']

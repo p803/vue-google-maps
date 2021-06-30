@@ -6,4 +6,4 @@ To play with the [example](https://github.com/p803/vue-google-maps/tree/master/e
 npm run serve:example
 ```
 
-Please set your Google Maps API key in `GOOGLE_MAPS_KEY` environment variable.
+Please set your Google Maps API key in `API_KEY` environment variable.

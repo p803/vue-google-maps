@@ -1,17 +1,17 @@
 # Components
-The options that can be set on each component adhere to the Google Maps API documentation and are listed below for quick reference.
+The options that can be set on each component adhere to the Google Maps API documentation and are linked below for quick reference.
 
 ## Map
-Renders [google maps map](https://developers.google.com/maps/documentation/javascript/reference/map#Map) (see [options](https://developers.google.com/maps/documentation/javascript/reference/map#MapOptions)).
+Renders a [Google Maps Map](https://developers.google.com/maps/documentation/javascript/reference/map#Map) widget (see [options](https://developers.google.com/maps/documentation/javascript/reference/map#MapOptions)).
 
 ```vue
 <template>
   <!-- Map centered at Warsaw, the capital of Poland. -->
   <google-maps-map class="map"
-                    :options="{
-                      zoom: 4,
-                      center: {lat: -25.344, lng: 131.036}
-                    }" />
+                   :options="{
+                     zoom: 4,
+                     center: { lat: -25.344, lng: 131.036 }
+                   }" />
 </template>
 
 <style scoped>
@@ -22,7 +22,7 @@ Renders [google maps map](https://developers.google.com/maps/documentation/javas
 ```
 
 ## Autocomplete
-Renders [google maps autocomplete](https://developers.google.com/maps/documentation/javascript/reference/places-widget#Autocomplete) (see [options](https://developers.google.com/maps/documentation/javascript/reference/places-widget#AutocompleteOptions)).
+Renders a [Google Maps Autocomplete](https://developers.google.com/maps/documentation/javascript/reference/places-widget#Autocomplete) widget (see [options](https://developers.google.com/maps/documentation/javascript/reference/places-widget#AutocompleteOptions)).
 
 ```vue
 <template>

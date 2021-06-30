@@ -7,7 +7,8 @@ npm install @p803/vue-google-maps
 ```
 
 ## CDN
-Use the standalone version:
+Simply include with a script tag:
 ```html
+<script src="https://unpkg.com/vue"></script>
 <script src="https://unpkg.com/@p803/vue-google-maps"></script>
 ```

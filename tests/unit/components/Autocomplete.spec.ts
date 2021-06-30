@@ -1,6 +1,6 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils'
-import VueGoogleMaps from '@/index'
 import Autocomplete from '@/components/Autocomplete.vue'
+import VueGoogleMaps from '@/index'
 
 const localVue = createLocalVue()
 
@@ -13,9 +13,7 @@ describe('Autocomplete', () => {
     // When:
     const wrapper = shallowMount(Autocomplete, {
       localVue,
-      propsData: {
-        options
-      }
+      propsData: { options }
     })
     // Then:
     expect(wrapper).not.toBeUndefined()

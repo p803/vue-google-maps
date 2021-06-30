@@ -1,6 +1,6 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils'
-import VueGoogleMaps from '@/index'
 import Map from '@/components/Map.vue'
+import VueGoogleMaps from '@/index'
 
 const localVue = createLocalVue()
 
