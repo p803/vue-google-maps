@@ -7,11 +7,13 @@ Renders a [Google Maps Map](https://developers.google.com/maps/documentation/jav
 ```vue
 <template>
   <!-- Map centered at Warsaw, the capital of Poland. -->
-  <google-maps-map class="map"
-                   :options="{
-                     zoom: 4,
-                     center: { lat: -25.344, lng: 131.036 }
-                   }" />
+  <google-maps-map
+    class="map"
+    :options="{
+      zoom: 4,
+      center: { lat: -25.344, lng: 131.036 }
+    }"
+  />
 </template>
 
 <style scoped>
@@ -27,13 +29,14 @@ Renders a [Google Maps Autocomplete](https://developers.google.com/maps/document
 ```vue
 <template>
   <!-- Autocomplete polish cities. -->
-  <google-maps-autocomplete v-model="input"
-                            :options="{
-                              types: ['(cities)'],
-                              componentRestrictions: { country: 'pl' },
-                              fields: ['geometry', 'name']
-                            }"
-                            @place_changed="onPlaceChanged" />
+  <google-maps-autocomplete
+    v-model="input"
+    :options="{
+      types: ['(cities)'],
+      componentRestrictions: { country: 'pl' },
+      fields: ['geometry', 'name']
+    }"
+    @place_changed="onPlaceChanged"
   />
 </template>
 

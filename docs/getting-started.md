@@ -13,7 +13,7 @@ Vue.use(VueGoogleMaps, {
 ```
 
 ## Browser
-Vue and VueGoogleMaps will be registered as a global variable.
+Vue and VueGoogleMaps are registered as a global variables.
 ```js
 Vue.use(VueGoogleMaps, {
   apiKey: '{key}',
