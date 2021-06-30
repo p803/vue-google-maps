@@ -7,12 +7,12 @@
 import Vue, { PropType } from 'vue'
 
 export type Map = google.maps.Map
-export type MapOptions = google.maps.MapOptions
+export type Options = google.maps.MapOptions
 
 export default Vue.extend({
   props: {
     options: {
-      type: Object as PropType<MapOptions>,
+      type: Object as PropType<Options>,
       default: () => ({})
     }
   },
@@ -21,14 +21,18 @@ export default Vue.extend({
       map: {} as Map
     }
   },
-  mounted () {
+  computed: {
+    element (): Element {
+      return this.$refs.map as Element
+    }
+  },
+  created () {
     this.createMap()
   },
   methods: {
     async createMap () {
-      const api = await this.$googleMapsApi
-      const element = this.$refs.map as Element
-      this.map = new api.Map(element, this.options)
+      const api = await this.$googleMaps
+      this.map = new api.Map(this.element, this.options)
     }
   }
 })

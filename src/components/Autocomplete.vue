@@ -2,7 +2,7 @@
   <input
     ref="autocomplete"
     :value="value"
-    @input="input"
+    @input="onInput"
     v-on="listeners"
   >
 </template>
@@ -36,23 +36,24 @@ export default Vue.extend({
       const listeners = { ...this.$listeners }
       delete listeners.input
       return listeners
+    },
+    element (): HTMLInputElement {
+      return this.$refs.autocomplete as HTMLInputElement
     }
   },
-  mounted () {
+  created () {
     this.createAutocomplete()
   },
   methods: {
     async createAutocomplete () {
-      const api = await this.$googleMapsApi
-      const element = this.$refs.autocomplete as HTMLInputElement
-      this.autocomplete = new api.places.Autocomplete(element, this.options)
-      this.autocomplete.addListener('place_changed', this.placeChanged.bind(this))
+      const api = await this.$googleMaps
+      this.autocomplete = new api.places.Autocomplete(this.element, this.options)
+      this.autocomplete.addListener('place_changed', this.onPlaceChanged.bind(this))
     },
-    input ($event: Event): void {
-      const target = $event.target as HTMLInputElement
-      this.$emit('input', target.value)
+    onInput (): void {
+      this.$emit('input', this.element.value)
     },
-    placeChanged (): void {
+    onPlaceChanged (): void {
       this.$emit('place_changed', this.autocomplete.getPlace())
     }
   }
